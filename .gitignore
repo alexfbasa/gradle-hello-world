@@ -57,3 +57,24 @@ gradle-*
 
 # Ignore system-specific files
 Thumbs.db
+.idea
+/build/
+/bin/
+/out/
+
+/*.jar
+/*.war
+/*.ear
+/*.tar
+/*.zip
+/*.tar.gz
+/.idea/
+/.vscode/
+/.gradle/
+/out/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.log
+

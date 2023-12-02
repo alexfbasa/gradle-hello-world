@@ -13,10 +13,21 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'gradlew build'
+                    // Print the current directory
+                    echo "Current Directory: ${pwd()}"
+
+                    // List the contents of the current directory
+                    sh 'ls -la'
+
+                    // Echo the Gradle wrapper script location
+                    sh 'echo "Gradle Wrapper Location: ${WORKSPACE}/gradlew"'
+
+                    // Run Gradle build
+                    sh './gradlew build'
                 }
             }
         }
+
 
         stage('Docker Build') {
             steps {

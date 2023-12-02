@@ -1,0 +1,59 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### macOS ###
+.DS_Store
+
+### Gradle ###
+.gradle/
+build/
+
+# Ignore Gradle Wrapper JAR file (no need to commit it)
+gradle-wrapper.jar
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file accidentally
+!gradle-wrapper.jar
+
+# Ignore the local Gradle distribution
+gradle-*
+
+# Ignore IDEA, Eclipse, and NetBeans project files
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+*.settings
+
+# Ignore macOS metadata
+.DS_Store
+
+# Ignore system-specific files
+Thumbs.db

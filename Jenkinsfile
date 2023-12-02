@@ -36,21 +36,6 @@ pipeline {
             }
         }
 
-        stage('Push to Docker Registry') {
-            steps {
-                script {
-                    // Use your GitHub token stored in 'github-token' secret
-                    def githubToken = credentials('github-token')
-
-                    // Perform Docker login using the token
-                    sh "echo ${githubToken} | docker login ghcr.io -u ${githubToken} --password-stdin"
-
-                    // Push the Docker image to the registry
-                    sh 'docker push alexsimple/lu-hello-world:latest'
-                }
-            }
-        }
-
         stage('Deploy to Minikube') {
             steps {
                 script {

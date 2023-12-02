@@ -36,11 +36,13 @@ pipeline {
                 }
             }
         }
-
         stage('Push to Docker Registry') {
             steps {
                 script {
-                    sh "echo $GITHUB_TOKEN | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin"
+                    def githubToken = credentials('github-token')
+
+                    sh "echo ${githubToken} | docker login ghcr.io -u ${githubToken} --password-stdin"
+
                     sh 'docker push alexsimple/lu-hello-world'
                 }
             }

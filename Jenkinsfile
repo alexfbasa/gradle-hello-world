@@ -56,7 +56,6 @@ pipeline {
             steps {
                 script {
                     sh 'envsubst < ${WORKSPACE}/deployment.yaml | kubectl apply -f -'
-#                    sh 'kubectl apply -f deployment.yaml'
                 }
             }
         }

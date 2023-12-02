@@ -55,7 +55,8 @@ pipeline {
         stage('Deploy to Minikube') {
             steps {
                 script {
-                    sh 'kubectl apply -f deployment.yaml'
+                    sh 'envsubst < ${WORKSPACE}/deployment.yaml | kubectl apply -f -'
+#                    sh 'kubectl apply -f deployment.yaml'
                 }
             }
         }
